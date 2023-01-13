@@ -19,9 +19,9 @@ let AppController = class AppController {
     constructor(pusherService) {
         this.pusherService = pusherService;
     }
-    async messages(username, message) {
+    async messages(date, message) {
         await this.pusherService.trigger('chat', 'message', {
-            username,
+            date,
             message,
         });
         return [];
@@ -29,10 +29,10 @@ let AppController = class AppController {
 };
 __decorate([
     (0, common_1.Post)('messages'),
-    __param(0, (0, common_1.Body)('username')),
+    __param(0, (0, common_1.Body)('date')),
     __param(1, (0, common_1.Body)('message')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, String]),
+    __metadata("design:paramtypes", [Date, String]),
     __metadata("design:returntype", Promise)
 ], AppController.prototype, "messages", null);
 AppController = __decorate([

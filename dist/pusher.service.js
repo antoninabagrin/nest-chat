@@ -15,10 +15,10 @@ const Pusher = require("pusher");
 let PusherService = class PusherService {
     constructor() {
         this.pusher = new Pusher({
-            appId: '',
-            key: '',
-            secret: '',
-            cluster: '',
+            appId: '1516276',
+            key: 'f85a22084951a14c4a39',
+            secret: '5960a5222ed6a0c21570',
+            cluster: 'eu',
             useTLS: true,
         });
     }
